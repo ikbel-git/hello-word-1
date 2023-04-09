@@ -1,3 +1,10 @@
-# This program prints Hello, world!
-
-print('Hello, world!')
+- concurrency: 100
+  hold-for: 10m
+  ramp-up: 120s
+  scenario: Thread Group
+scenarios:
+  Thread Group:
+    requests:
+    - label: blazedemo
+      method: GET
+      url: http://blazedemo.com/
